@@ -9,7 +9,6 @@ let unlock = true;
 // чтоб не было двойных нажатий
 
 const timeout = 800;
-const timeout2 = 400;
 
 if (popupLinks.length > 0) {
     // перевірка на існування попапів на сторінці
@@ -103,12 +102,12 @@ function bodyUnLock() {
         body.style.paddingRight = '0px';
         body.classList.remove('lock');
         html.classList.remove('lock');
-    }, timeout);
+    }, 0);
 
     unlock = false;
     setTimeout(function () {
         unlock = true;
-    }, timeout2);
+    }, timeout);
 }
 
 document.addEventListener('keydown', function (e) {

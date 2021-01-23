@@ -303,7 +303,7 @@ input[type="text"]::-moz-placeholder {
     margin-top: 35px;
 
     font-size: 13px;
-    line-height: 27px;
+    line-height: 20px;
     padding-right: 63px;
     min-width: 535px;
 
@@ -434,7 +434,7 @@ input[type="text"]::-moz-placeholder {
 }
 
 .steps_text {
-    line-height: 27px;
+    line-height: 20px;
     font-size: 13px;
     margin-bottom: 70px;
 
@@ -570,7 +570,7 @@ input[type="text"]::-moz-placeholder {
 
 .agents p {
     font-size: 13px;
-    line-height: 30px;
+    line-height: 25px;
 }
 
 .a-inf {
@@ -666,7 +666,7 @@ input[type="text"]::-moz-placeholder {
 
 .add-line p {
     font-size: 13px;
-    line-height: 30px;
+    line-height: 25px;
     margin-left: 125px;
     width: 460px;
 }
@@ -1503,13 +1503,12 @@ hr {
     }
 
     .apart .search-button input[type=text] {
-        min-width: 200px;
+        min-width: 260px;
     }
 
 
     .apart .search-button input[type=submit] {
         font-size: 14px;
-        width: 20vw;
 
     }
 
@@ -1667,7 +1666,7 @@ hr {
     .apart .search-button input[type=submit] {
         width: 233px;
         align-items: center;
-        padding-top: 27px;
+        padding-top: 13px;
         margin: 0 auto;
         font-size: 12px;
     }
@@ -1742,8 +1741,7 @@ hr {
     }
 
     .agents .a-inf {
-        width: 65vw;
-        margin-left: 20vw;
+        padding: 20px;
     }
 
     .agent-card {
