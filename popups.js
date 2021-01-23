@@ -1,6 +1,7 @@
 const popupLinks = document.querySelectorAll('.popup-link');
 // for get all popups
 const body = document.querySelector('body');
+const html = document.querySelector('html');
 // for get body and block global skroller
 const lockPadding = document.querySelectorAll('.lock-padding');
 
@@ -8,6 +9,7 @@ let unlock = true;
 // чтоб не было двойных нажатий
 
 const timeout = 800;
+const timeout2 = 400;
 
 if (popupLinks.length > 0) {
     // перевірка на існування попапів на сторінці
@@ -71,6 +73,7 @@ function bodyLock() {
     }
     body.style.paddingRight = lockPaddingValue;
     body.classList.add('lock');
+    html.classList.add('lock');
 
     unlock = false;
     setTimeout(function () {
@@ -99,12 +102,13 @@ function bodyUnLock() {
         }
         body.style.paddingRight = '0px';
         body.classList.remove('lock');
+        html.classList.remove('lock');
     }, timeout);
 
     unlock = false;
     setTimeout(function () {
         unlock = true;
-    }, timeout);
+    }, timeout2);
 }
 
 document.addEventListener('keydown', function (e) {

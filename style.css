@@ -6,18 +6,21 @@
 
 }
 
-body,
 html {
     color: #1f373d;
     overflow-x: hidden;
 }
-
 body {
+    color: #1f373d;
     overflow-x: hidden;
 }
 
 body.lock {
-    overflow: hidden;
+    overflow-y: hidden;
+}
+
+html.lock {
+    overflow-y: hidden;
 }
 
 nav {
@@ -801,8 +804,8 @@ hr {
     background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;
-    /*opacity: 0;*/
-    /*visibility: hidden;*/
+    opacity: 0;
+    visibility: hidden;
     transition: all 0.8 ease 0s;
     overflow: auto;
 }
