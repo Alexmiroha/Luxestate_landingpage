@@ -9,6 +9,7 @@
 body,
 html {
     color: #1f373d;
+    overflow-x: hidden;
 }
 
 body {
@@ -1353,6 +1354,9 @@ hr {
         border-radius: 0px 100px 0px 100px;
     }
 
+    .menu li a.contact {
+        margin: 0;
+    }
 
 }
 
