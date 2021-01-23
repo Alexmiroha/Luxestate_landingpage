@@ -801,8 +801,8 @@ hr {
     background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;
-    opacity: 0;
-    visibility: hidden;
+    /*opacity: 0;*/
+    /*visibility: hidden;*/
     transition: all 0.8 ease 0s;
     overflow: auto;
 }
@@ -839,15 +839,22 @@ hr {
 }
 
 .popup_close {
+    width: 9px;
+    height: 17px;
+    padding: 5px 9px;
     position: absolute;
     right: 30px;
     font-size: 15px;
     text-decoration: none;
-    color: black;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #99dd22;
 }
 
 .popup_close:hover {
-    color:red;
+    color:black;
+    background-color: rgba(255, 0, 0, 0.05);
+    border: 0.5px solid rgba(128, 128, 128, 0.11);
 }
 
 .popup_form_field {
@@ -971,25 +978,15 @@ hr {
 
     }
 
-    .intro .search-button {
-        top: 50vh;
-
-
-    }
-
     .intro .search-button input[type=text] {
-        height: 9vh;
-        min-height: 40px;
-        max-height: 70px;
+
 
 
     }
 
 
     .intro .search-button input[type=submit] {
-        height: 9vh;
-        min-height: 40px;
-        max-height: 70px;
+
 
 
     }
@@ -998,10 +995,23 @@ hr {
         top: 70vh;
     }
 
+    .popup_form_field_tittle {
+        display: none;
+    }
+
+    .popup_form_field {
+        padding: 3px 25px;
+    }
+
+    .pupup_btn input[type=submit] {
+        margin-top: 5px;
+    }
+
 }
 
 
-@media screen and (max-height: 460px) {
+@media screen and (max-height: 500px) {
+
 }
 
 
@@ -1153,7 +1163,7 @@ hr {
 
     .agent-cards {
         flex-direction: column;
-
+        gap: 20px;
 
     }
 
@@ -1374,7 +1384,7 @@ hr {
     .intro-img {
 
 
-        max-height: 95vh;
+        max-height: 90vh;
 
         left: 0px;
         background-position: bottom 0px right 0px;
@@ -1382,22 +1392,28 @@ hr {
 
 
     .intro .search-button {
-        left: 30vw;
-        top: 30%;
-
-        max-width: 350px;
+        top: 50%;
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        left: 0px;
     }
 
     .search-button input[type=text] {
-        width: 250px;
+        width: 100%;
+        display: block;
         font-size: 14px;
         border-radius: 4px;
+        height: 40px;
     }
 
     .search-button input[type=submit] {
-        width: 313px;
+        width: 100%;
+        display: block;
         border-radius: 4px;
         margin-top: 10px;
+        height: 40px;
     }
 
     .intro .intro-text {
@@ -1410,16 +1426,24 @@ hr {
     }
 
     .scroll-button {
-        top: 40vh;
+        top: 60vh;
         left: 20px;
         position: absolute;
-        width: 20px;
-        height: 100px;
+        max-width: 10px;
+        height: 10px;
         background-color: white;
-        padding: 40px 0px 0px 0px;
+        padding: 30px 0px 20px 0px;
         border-radius: 10px;
         opacity: 0.8;
 
+    }
+
+    .arrow-1 {
+        padding: 0px 0px 0px 41px;
+    }
+
+    .scroll-button p {
+        display: none;
     }
 
     .intro-contacts {
@@ -1447,6 +1471,14 @@ hr {
 
     .stats-text h2 {
         width: 90vw;
+    }
+
+    .stats-text p {
+        padding-right: 0;
+    }
+
+    .steps_text {
+        padding: 0px 40px;
     }
 
     .apart h2 {
@@ -1496,6 +1528,11 @@ hr {
 
     .steps_text br {
         display: none;
+    }
+
+    .serv_ttl {
+        padding: 0px 40px;
+        word-spacing: 0px;
     }
 
     .serv-text {
@@ -1565,33 +1602,35 @@ hr {
         min-width: 124px;
 
     }
+    #home_scroll {
+        left: 80vw;
+        top: 7vh;
+        height: 0px;
+        padding: 30px 0px 30px 0px;
+        border-radius: 10px;
+    }
+
+    .popup_content {
+        max-width: 500px;
+        padding: 10px;
+    }
+
+    .pupup_form_input {
+        width: 240px;
+    }
+
+    .popup_form_message {
+        width: 286px;
+    }
 }
 
 @media screen and (max-width: 354px) {
-    .intro .search-button {
-        left: 10px;
-
-
-    }
-
-    .search-button input[type=text] {
-        width: 40vw;
-
-
-    }
-
-
-    .search-button input[type=submit] {
-        width: 58vw;
-
-    }
 
     .intro .intro-text {
         font-size: 8.5vw;
     }
 
     .scroll-button {
-        top: 48%;
     }
 
 
@@ -1755,6 +1794,27 @@ hr {
 
     .footer-link a, .footer-link p {
         font-size: 10px;
+
+    }
+
+    .popup_content {
+        max-width: 400px;
+        padding: 5px;
+    }
+
+    .pupup_form_input {
+        width: 140px;
+    }
+
+    .popup_form_message {
+        width: 186px;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    .intro .search-button {
+        top: 30vh;
+
 
     }
 }
