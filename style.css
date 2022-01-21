@@ -1,6 +1,8 @@
 :root {
     --first-main-color: #ffcc01;
     --second-main-color: #1f373d;
+    --button-fs: 18px;
+    --paragraph-fs: 16px;
 }
 
 * {
@@ -15,6 +17,7 @@ html {
     color: var(--second-main-color);
     overflow-x: hidden;
 }
+
 body {
     color: var(--second-main-color);
     overflow-x: hidden;
@@ -39,6 +42,10 @@ nav {
     display: none;
 }
 
+.header {
+    margin-top: 10px;
+}
+
 .menu {
     padding: 0px;
     margin: 0px;
@@ -50,29 +57,37 @@ nav {
     list-style-type: none;
 }
 
-.menu li a {
-    text-decoration: none;
-    align-self: center;
-    font-size: 13px;
-    padding: 15px 20px;
+.menu li {
     transition: background .2s linear;
-    color: var(--second-main-color);
+    padding: 15px 20px;
 }
 
-.menu li a:hover {
+.menu li:hover {
     background: var(--first-main-color);
     border-radius: 3px;
 }
 
+.menu li a {
+    text-decoration: none;
+    align-self: center;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background .2s linear;
+    color: var(--second-main-color);
+}
+
 .menu li a.logo {
     font-size: 25px;
-    margin-right: 150px;
-
+    letter-spacing: 5px;
 
 }
 
-.menu li a.contact {
-    margin-right: 50px;
+.menu li.about {
+    margin-left: 40px;
+}
+
+.menu li.contact {
+    margin-left: 70px;
 }
 
 
@@ -99,16 +114,17 @@ nav {
     height: 640px;
     position: relative;
     left: 133px;
+    top: -15px;
 
 }
 
 .intro .intro-text {
     position: relative;
-    font-size: 62px;
+    font-size: 50px;
     font-weight: bolder;
 
-    right: 230px;
-    top: 125px;
+    right: 180px;
+    top: 90px;
 
 }
 
@@ -156,7 +172,7 @@ input[type="text"]::-moz-placeholder {
     border: none;
     height: 70px;
     background: var(--first-main-color);
-    font-size: 15px;
+    font-size: var(--button-fs);
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     color: var(--second-main-color);
@@ -265,7 +281,7 @@ input[type="text"]::-moz-placeholder {
     max-height: 200px;
     position: absolute;
     right: -68px;
-    top: 559px;
+    top: 542px;
     display: flex;
     justify-content: space-between;
     padding: 30px 50px;
@@ -278,7 +294,7 @@ input[type="text"]::-moz-placeholder {
 }
 
 .intro-contacts p {
-    font-size: 18px;
+    font-size: var(--button-fs);
     margin-right: 60px;
 
 }
@@ -308,7 +324,7 @@ input[type="text"]::-moz-placeholder {
 .stats-text p {
     margin-top: 35px;
 
-    font-size: 13px;
+    font-size: var(--paragraph-fs);
     line-height: 20px;
     padding-right: 63px;
     min-width: 535px;
@@ -323,8 +339,8 @@ input[type="text"]::-moz-placeholder {
 .square {
     width: 17vw;
     height: 17vw;
-    max-width: 270px;
-    max-height: 270px;
+    max-width: 250px;
+    max-height: 250px;
     min-width: 110px;
     min-height: 110px;
     background-color: #f6f5f4;
@@ -335,15 +351,48 @@ input[type="text"]::-moz-placeholder {
     flex-direction: column;
 }
 
+.apartments-square {
+    background-image: url("img/apartments.jpg");
+}
+
+.clients-square {
+    background-image: url("img/clients.jpg");
+}
+
+.employees-square {
+    background-image: url("img/employees.jpg");
+}
+
+.awards-square {
+    background-image: url("img/Awards.jpg");
+}
+
+.backdrop {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(2px) opacity(0.5);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 240px;
+    height: 240px;
+}
+
 .stats-square {
     font-size: 40px;
-    color: var(--first-main-color);
+    color: var(--second-main-color);
     margin-bottom: 15px;
     font-weight: 700;
+    -webkit-text-stroke: 1px rgba(0,0,0,0.5);
 }
 
 .square-text {
-    font-size: 13px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--second-main-color);
+    -webkit-text-stroke: 1px rgba(0,0,0,0.5);
 
 }
 
@@ -412,7 +461,7 @@ input[type="text"]::-moz-placeholder {
     border-radius: 4px;
     margin-left: 40px;
     margin-top: 0px;
-    font-size: 15px;
+    font-size: var(--button-fs);
     transition: background .4s linear;
     color: #1f373d;
 }
@@ -441,7 +490,7 @@ input[type="text"]::-moz-placeholder {
 
 .steps_text {
     line-height: 20px;
-    font-size: 13px;
+    font-size: var(--paragraph-fs);
     margin-bottom: 70px;
 
 
@@ -549,7 +598,7 @@ input[type="text"]::-moz-placeholder {
 }
 
 .services p {
-    font-size: 13px;
+    font-size: var(--paragraph-fs);
     line-height: 25px;
 
 }
@@ -575,7 +624,7 @@ input[type="text"]::-moz-placeholder {
 }
 
 .agents p {
-    font-size: 13px;
+    font-size: var(--paragraph-fs);
     line-height: 25px;
 }
 
@@ -671,7 +720,7 @@ input[type="text"]::-moz-placeholder {
 }
 
 .add-line p {
-    font-size: 13px;
+    font-size: var(--paragraph-fs);
     line-height: 25px;
     margin-left: 125px;
     width: 460px;
@@ -700,7 +749,7 @@ input[type="text"]::-moz-placeholder {
     position: relative;
     top: -130px;
     left: 535px;
-    font-size: 18px;
+    font-size: var(--button-fs);
     background: var(--first-main-color);
     padding: 25px 70px 25px 55px;
     display: inline-block;
@@ -861,7 +910,7 @@ hr {
 }
 
 .popup_close:hover {
-    color:black;
+    color: black;
     background-color: rgba(255, 0, 0, 0.05);
     border: 0.5px solid rgba(128, 128, 128, 0.11);
 }
@@ -888,6 +937,7 @@ hr {
 .popup_form_input_wrapper {
     position: relative;
 }
+
 .pupup_form_input {
     height: 40px;
     padding-left: 40px;
@@ -959,8 +1009,6 @@ hr {
 }
 
 
-
-
 @media screen and (max-height: 730px) {
 
 
@@ -990,12 +1038,10 @@ hr {
     .intro .search-button input[type=text] {
 
 
-
     }
 
 
     .intro .search-button input[type=submit] {
-
 
 
     }
@@ -1610,6 +1656,7 @@ hr {
         min-width: 124px;
 
     }
+
     #home_scroll {
         left: 80vw;
         top: 7vh;
@@ -1773,6 +1820,7 @@ hr {
         font-size: 13px;
         padding-left: 5px;
     }
+
     .location-australia {
         bottom: 53px;
     }
