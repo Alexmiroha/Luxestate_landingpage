@@ -1,3 +1,8 @@
+:root {
+    --first-main-color: #ffcc01;
+    --second-main-color: #1f373d;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -7,11 +12,11 @@
 }
 
 html {
-    color: #1f373d;
+    color: var(--second-main-color);
     overflow-x: hidden;
 }
 body {
-    color: #1f373d;
+    color: var(--second-main-color);
     overflow-x: hidden;
 }
 
@@ -51,11 +56,11 @@ nav {
     font-size: 13px;
     padding: 15px 20px;
     transition: background .2s linear;
-    color: #1f373d;
+    color: var(--second-main-color);
 }
 
 .menu li a:hover {
-    background: #ffcc01;
+    background: var(--first-main-color);
     border-radius: 3px;
 }
 
@@ -125,7 +130,7 @@ nav {
     outline: none;
     padding-left: 62px;
     font-size: 15px;
-    color: #1f373d;
+    color: var(--second-main-color);
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -133,13 +138,13 @@ nav {
 }
 
 input[type="text"]::-webkit-input-placeholder {
-    color: #1f373d;
+    color: var(--second-main-color);
     opacity: 0.6;
 }
 
 /*Safari & Chrome*/
 input[type="text"]::-moz-placeholder {
-    color: #1f373d;
+    color: var(--second-main-color);
     opacity: 0.6;
 }
 
@@ -150,11 +155,11 @@ input[type="text"]::-moz-placeholder {
     width: 147px;
     border: none;
     height: 70px;
-    background: #ffcc01;
+    background: var(--first-main-color);
     font-size: 15px;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-    color: #1f373d;
+    color: var(--second-main-color);
     outline: none;
 }
 
@@ -180,8 +185,8 @@ input[type="text"]::-moz-placeholder {
     display: block;
     width: 10px;
     height: 10px;
-    border-bottom: 2px solid #1f373d;
-    border-right: 2px solid #1f373d;
+    border-bottom: 2px solid var(--second-main-color);
+    border-right: 2px solid var(--second-main-color);
     transform: rotate(45deg);
     margin: -10px;
     animation: arrow-1 2s infinite;
@@ -216,6 +221,7 @@ input[type="text"]::-moz-placeholder {
     transform: rotate(-90deg);
     font-size: 12px;
     text-align: center;
+    padding-top: 12px;
 
 }
 
@@ -244,17 +250,17 @@ input[type="text"]::-moz-placeholder {
 #home_scroll p {
     color: black;
     position: relative;
-    top: 20px;
+    padding: 0px;
 
 }
 
-#home_scroll .arrow-1 span {
-
+#home_scroll .arrow-1 {
+    padding-top: 45px;
 }
 
 
 .intro-contacts {
-    background-color: #ffcc01;
+    background-color: var(--first-main-color);
     max-width: 700px;
     max-height: 200px;
     position: absolute;
@@ -331,7 +337,7 @@ input[type="text"]::-moz-placeholder {
 
 .stats-square {
     font-size: 40px;
-    color: #ffcc01;
+    color: var(--first-main-color);
     margin-bottom: 15px;
     font-weight: 700;
 }
@@ -370,7 +376,7 @@ input[type="text"]::-moz-placeholder {
 
 .priceitp .price {
     font-size: 18px;
-    color: #ffcc01;
+    color: var(--first-main-color);
 }
 
 .info_card_icon {
@@ -459,7 +465,7 @@ input[type="text"]::-moz-placeholder {
 
 
 .step_block:hover {
-    background: #ffcc01;
+    background: var(--first-main-color);
     color: white;
 }
 
@@ -495,7 +501,7 @@ input[type="text"]::-moz-placeholder {
     display: inline-block;
     margin-left: 70px;
     margin-top: 25px;
-    border-bottom: 3px solid #1f373d;
+    border-bottom: 3px solid var(--second-main-color);
     padding-bottom: 7px;
 }
 
@@ -695,7 +701,7 @@ input[type="text"]::-moz-placeholder {
     top: -130px;
     left: 535px;
     font-size: 18px;
-    background: #1f373d;
+    background: var(--first-main-color);
     padding: 25px 70px 25px 55px;
     display: inline-block;
     margin-left: 130px;
@@ -711,7 +717,7 @@ input[type="text"]::-moz-placeholder {
 
 footer {
 
-    background: #1f373d;
+    background: var(--second-main-color);
     color: white;
     padding-top: 50px;
     padding-bottom: 80px;
@@ -746,7 +752,7 @@ footer {
     top: 2px;
     outline: none;
     border: none;
-    color: #1f373d;
+    color: var(--second-main-color);
     background: rgba(0, 0, 0, 0);
 }
 
@@ -893,14 +899,14 @@ hr {
 
 .pupup_form_input:focus {
     background-color: rgba(255, 249, 235, 0.5);
-    outline-color: #ffcc01;
-    color: #1f373d;
+    outline-color: var(--first-main-color);
+    color: var(--second-main-color);
     font-weight: 600;
     transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 .pupup_form_input:focus + .pupup_form_icon {
-    color: #ffcc01;
+    color: var(--first-main-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
@@ -925,7 +931,7 @@ hr {
 }
 
 .popup_form_field_tittle {
-    color: #1f373d;
+    color: var(--second-main-color);
     font-size: 16px;
     padding-bottom: 8px;
 }
@@ -945,8 +951,8 @@ hr {
 
 .popup_form_message:focus {
     background-color: rgba(255, 249, 235, 0.5);
-    outline-color: #ffcc01;
-    color: #1f373d;
+    outline-color: var(--first-main-color);
+    color: var(--second-main-color);
     transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
     font-style: normal;
 
@@ -1252,12 +1258,12 @@ hr {
         font-size: 18px;
         line-height: 40px;
         width: 100%;
-        background: #ffcc01;
+        background: var(--first-main-color);
         transition: all .1s linear;
     }
 
     .toggle:hover {
-        background: #d3a900;
+        background: var(--first-main-color);
     }
 
     #checkbox-menu:checked + label .touch li {
