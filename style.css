@@ -57,23 +57,19 @@ nav {
     list-style-type: none;
 }
 
-.menu li {
-    transition: background .2s linear;
-    padding: 15px 20px;
-}
-
-.menu li:hover {
-    background: var(--first-main-color);
-    border-radius: 3px;
-}
-
 .menu li a {
+    padding: 15px 20px;
     text-decoration: none;
     align-self: center;
     font-size: 16px;
     font-weight: 600;
     transition: background .2s linear;
     color: var(--second-main-color);
+}
+
+.menu li:hover a {
+    background: var(--first-main-color);
+    border-radius: 3px;
 }
 
 .menu li a.logo {
@@ -253,7 +249,7 @@ input[type="text"]::-moz-placeholder {
     position: fixed;
     min-width: 75px;
     height: 100px;
-    padding: 10px 0px 10px 0px;
+    padding-top: 30px;
     background-color: white;
     left: 90vw;
     top: 85vh;
@@ -323,7 +319,6 @@ input[type="text"]::-moz-placeholder {
 
 .stats-text p {
     margin-top: 35px;
-
     font-size: var(--paragraph-fs);
     line-height: 20px;
     padding-right: 63px;
@@ -343,12 +338,21 @@ input[type="text"]::-moz-placeholder {
     max-height: 250px;
     min-width: 110px;
     min-height: 110px;
-    background-color: #f6f5f4;
     margin: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.square:hover .backdrop {
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    border: 0.5px solid rgba(211, 211, 211, 0.3);
+    color: var(--first-main-color);
+    -webkit-text-stroke: unset;
+    cursor: pointer;
 }
 
 .apartments-square {
@@ -378,21 +382,30 @@ input[type="text"]::-moz-placeholder {
     flex-direction: column;
     width: 240px;
     height: 240px;
+    color: var(--second-main-color);
+    -webkit-text-stroke: 1px rgba(0,0,0,0.5);
+}
+
+.backdrop span:first-child {
+    margin-top: 60px;
+}
+
+.backdrop span:last-child {
+    margin-bottom: 70px;
 }
 
 .stats-square {
     font-size: 40px;
-    color: var(--second-main-color);
+
     margin-bottom: 15px;
     font-weight: 700;
-    -webkit-text-stroke: 1px rgba(0,0,0,0.5);
+
 }
 
 .square-text {
     font-size: 20px;
     font-weight: 600;
-    color: var(--second-main-color);
-    -webkit-text-stroke: 1px rgba(0,0,0,0.5);
+
 
 }
 
@@ -502,8 +515,8 @@ input[type="text"]::-moz-placeholder {
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    cursor: pointer;
 }
-
 
 .step_block .step_number {
     font-size: 200px;
@@ -593,7 +606,7 @@ input[type="text"]::-moz-placeholder {
 .services h2 {
     font-size: 40px;
     font-weight: bolder;
-    margin-top: 35px;
+    margin-top: 100px;
     margin-bottom: 15px;
 }
 
@@ -658,14 +671,20 @@ input[type="text"]::-moz-placeholder {
 }
 
 .agent-info {
-    padding-top: 10px;
-    padding-left: 25px;
+    padding: 5px 0px 10px 25px;
+}
+
+.social {
+    position: relative;
+    top: -7px;
+}
+
+.social a {
+    text-decoration: none;
+    margin-right: 25px;
 }
 
 .social_icon {
-    margin-right: 32px;
-    position: relative;
-    top: 7px;
     color: #000;
 }
 
@@ -756,6 +775,7 @@ input[type="text"]::-moz-placeholder {
     margin-left: 130px;
     color: #fff;
     margin-top: 40px;
+    cursor: pointer;
 }
 
 
