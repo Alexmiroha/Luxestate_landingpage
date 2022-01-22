@@ -173,6 +173,7 @@ input[type="text"]::-moz-placeholder {
     border-bottom-right-radius: 4px;
     color: var(--second-main-color);
     outline: none;
+    cursor: pointer;
 }
 
 .search-button input[type=submit]:hover {
@@ -234,39 +235,57 @@ input[type="text"]::-moz-placeholder {
     font-size: 12px;
     text-align: center;
     padding-top: 12px;
+    position: relative;
+}
 
+.intro-button p {
+    transform: rotate(0deg);
+}
+
+#home_scroll .arrow-1 {
+    
 }
 
 .scroll-button {
-    position: relative;
-    right: 1050px;
-    top: 550px;
+    height: 100px;
+    width: 50px;
+    position: absolute;
+    bottom: 200px;
+    left: 0;
+    right: 800px;
+    margin: 0 auto;
     text-decoration: none;
     color: #1f373d;
+    border: 1px solid red;
 }
 
 #home_scroll {
     position: fixed;
-    min-width: 75px;
     height: 100px;
-    padding-top: 30px;
+    width: 50px;
     background-color: white;
-    left: 90vw;
-    top: 85vh;
     transform: rotate(180deg);
     border-radius: 25px;
     opacity: 0.5;
     z-index: 2;
+    bottom: 0;
+    left: 90%;
+    right: 0;
+    margin: 0 auto;
 }
 
 #home_scroll p {
     color: black;
     position: relative;
+    top: 20px;
     padding: 0px;
 
 }
 
 #home_scroll .arrow-1 {
+    position: relative;
+    top: 15px;
+    right: 11px;
     padding-top: 45px;
 }
 
@@ -477,6 +496,7 @@ input[type="text"]::-moz-placeholder {
     font-size: var(--button-fs);
     transition: background .4s linear;
     color: #1f373d;
+    cursor: pointer;
 }
 
 .all_ap:hover {
@@ -1028,18 +1048,12 @@ hr {
 
 }
 
-
 @media screen and (max-height: 730px) {
 
 
     .intro .intro-text {
-        font-size: 8vh;
+        font-size: 7vh;
         top: 15vh;
-    }
-
-
-    .scroll-button p {
-        display: none;
     }
 
     .arrow-1 {
@@ -1047,22 +1061,8 @@ hr {
 
     }
 
-    .scroll-button {
-        top: 70vh;
-        max-height: 77px;
-        padding: 0;
-
-
-    }
-
-    .intro .search-button input[type=text] {
-
-
-    }
-
-
-    .intro .search-button input[type=submit] {
-
+    .intro .search-button {
+        transform: scale(0.8);
 
     }
 
@@ -1085,11 +1085,6 @@ hr {
 }
 
 
-@media screen and (max-height: 500px) {
-
-}
-
-
 @media screen and (max-width: 1118px) {
 
 
@@ -1103,13 +1098,6 @@ hr {
 
     .menu li a.contact {
         margin-right: 25px;
-    }
-
-    .scroll-button {
-        right: 85%;
-        top: 74%;
-
-        min-width: 75px;
     }
 
     .intro .search-button {
@@ -1312,7 +1300,7 @@ hr {
 
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 950px) {
 
     /*header/*header*/
     /*header*/
@@ -1326,6 +1314,10 @@ hr {
         width: 100%;
         background: var(--first-main-color);
         transition: all .1s linear;
+    }
+
+    .header {
+        margin-top: 0px;
     }
 
     .toggle:hover {
@@ -1373,13 +1365,12 @@ hr {
 
     }
 
-    .menu li a.contacts {
-        margin-right: 0px;
-
+    .menu li.about, .menu li.contact {
+        margin-left: 0px;
     }
 
     .intro .search-button {
-        right: 25%;
+        right: 0px;
     }
 
     /*header/*header*/
@@ -1458,7 +1449,7 @@ hr {
 
     .intro-img {
 
-
+        top: 0px;
         max-height: 90vh;
 
         left: 0px;
@@ -1484,7 +1475,7 @@ hr {
     }
 
     .search-button input[type=submit] {
-        width: 100%;
+        width: calc(100% + 62px);
         display: block;
         border-radius: 4px;
         margin-top: 10px;
@@ -1500,25 +1491,8 @@ hr {
 
     }
 
-    .scroll-button {
-        top: 60vh;
-        left: 20px;
-        position: absolute;
-        max-width: 10px;
-        height: 10px;
-        background-color: white;
-        padding: 30px 0px 20px 0px;
-        border-radius: 10px;
-        opacity: 0.8;
-
-    }
-
     .arrow-1 {
         padding: 0px 0px 0px 41px;
-    }
-
-    .scroll-button p {
-        display: none;
     }
 
     .intro-contacts {
@@ -1677,14 +1651,6 @@ hr {
 
     }
 
-    #home_scroll {
-        left: 80vw;
-        top: 7vh;
-        height: 0px;
-        padding: 30px 0px 30px 0px;
-        border-radius: 10px;
-    }
-
     .popup_content {
         max-width: 500px;
         padding: 10px;
@@ -1703,9 +1669,6 @@ hr {
 
     .intro .intro-text {
         font-size: 8.5vw;
-    }
-
-    .scroll-button {
     }
 
 
@@ -1888,8 +1851,9 @@ hr {
 
 @media screen and (max-height: 750px) {
     .intro .search-button {
-        top: 30vh;
+        top: 32vh;
 
 
     }
+
 }
