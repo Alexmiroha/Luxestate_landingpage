@@ -102,6 +102,7 @@ nav {
     position: relative;
     height: 90vh;
     min-height: 700px;
+    max-height: 900px;
 }
 
 .intro-img {
@@ -238,25 +239,33 @@ input[type="text"]::-moz-placeholder {
     position: relative;
 }
 
-.intro-button p {
+.intro-scroll-button {
+    height: 40px;
+    width: 150px;
+    transform: rotate(90deg);
+}
+.intro-scroll-button p {
     transform: rotate(0deg);
 }
 
-#home_scroll .arrow-1 {
-    
+.intro-scroll-button .arrow-1 {
+    position: relative;
+    transform: rotate(-90deg);
+
+    padding: 0px;
+    max-width: 1px;
+    left: 140px;
+    bottom: 10px;
 }
 
 .scroll-button {
-    height: 100px;
-    width: 50px;
     position: absolute;
     bottom: 200px;
     left: 0;
-    right: 800px;
+
     margin: 0 auto;
     text-decoration: none;
     color: #1f373d;
-    border: 1px solid red;
 }
 
 #home_scroll {
@@ -351,12 +360,8 @@ input[type="text"]::-moz-placeholder {
 }
 
 .square {
-    width: 17vw;
-    height: 17vw;
-    max-width: 250px;
-    max-height: 250px;
-    min-width: 110px;
-    min-height: 110px;
+    width: 250px;
+    height: 250px;
     margin: 15px;
     display: flex;
     justify-content: center;
@@ -365,6 +370,7 @@ input[type="text"]::-moz-placeholder {
 }
 
 .square:hover .backdrop {
+
     background-color: white;
     width: 250px;
     height: 250px;
@@ -1132,7 +1138,6 @@ hr {
 
     .stats-info {
         margin: 0 auto;
-
     }
 
 
@@ -1447,6 +1452,24 @@ hr {
 
     }
 
+    .intro-scroll-button {
+        position: relative;
+        left: -130px;
+
+    }
+
+    .intro-scroll-button p {
+        display: none;
+    }
+
+    .intro-scroll-button .arrow-1 {
+        transform: rotate(0deg);
+        padding: 30px 13px 35px 20px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 20px;
+        bottom: 0px;
+    }
+
     .intro-img {
 
         top: 0px;
@@ -1480,6 +1503,7 @@ hr {
         border-radius: 4px;
         margin-top: 10px;
         height: 40px;
+        padding-right: 62px;
     }
 
     .intro .intro-text {
@@ -1503,12 +1527,12 @@ hr {
         max-width: 865px;
     }
 
-    .intro-contacts i {
-        margin-right: 15px;
+    .intro-icon {
+        margin-right: 10px;
     }
 
     .intro-contacts p {
-        font-size: 10px;
+        font-size: 14px;
         margin-right: 0px;
     }
 
@@ -1524,6 +1548,10 @@ hr {
 
     .stats-text p {
         padding-right: 0;
+    }
+
+    .stats-info {
+        transform: scale(0.8);
     }
 
     .steps_text {
@@ -1555,7 +1583,7 @@ hr {
 
     .apart .search-button input[type=submit] {
         font-size: 14px;
-
+        width: 100%;
     }
 
     .all_ap {
