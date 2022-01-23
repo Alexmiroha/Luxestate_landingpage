@@ -360,13 +360,16 @@ input[type="text"]::-moz-placeholder {
 }
 
 .square {
-    width: 250px;
-    height: 250px;
+    width: 17vw;
+    height: 17vw;
+    max-width: 250px;
+    max-height: 250px;
     margin: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .square:hover .backdrop {
@@ -636,7 +639,7 @@ input[type="text"]::-moz-placeholder {
     margin-bottom: 15px;
 }
 
-.services p {
+.serv-ttl {
     font-size: var(--paragraph-fs);
     line-height: 25px;
 
@@ -662,7 +665,7 @@ input[type="text"]::-moz-placeholder {
     font-weight: bolder;
 }
 
-.agents p {
+.a-inf {
     font-size: var(--paragraph-fs);
     line-height: 25px;
 }
@@ -859,6 +862,8 @@ hr {
 
 .footer-links {
     display: flex;
+    flex-wrap: wrap;
+    align-content: center;
     justify-content: space-between;
     padding-right: 90px;
 }
@@ -934,6 +939,7 @@ hr {
     max-width: 800px;
     padding: 30px;
     position: relative;
+    border-radius: 10px;
 }
 
 .popup_form {
@@ -1056,6 +1062,9 @@ hr {
 
 @media screen and (max-height: 730px) {
 
+    .intro {
+
+    }
 
     .intro .intro-text {
         font-size: 7vh;
@@ -1165,22 +1174,15 @@ hr {
     }
 
 
-    .steps_text {
+    .steps_text, .serv_ttl, .a-inf {
         text-align: center;
-        letter-spacing: 1.5px;
+        letter-spacing: 1.2px;
         word-spacing: 3px;
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .step_block {
         margin: 5px;
-    }
-
-    .serv_ttl {
-        text-align: center;
-        letter-spacing: 1.5px;
-        word-spacing: 3px;
-        font-size: 15px;
     }
 
     .services {
@@ -1194,23 +1196,20 @@ hr {
 
     .serv-img {
         overflow: hidden;
-        /*opacity: 0.8;*/
         width: 90%;
         height: 700px;
         padding: 0;
-        height: 700px;
         margin: 0 auto;
     }
 
     .serv-img img {
         top: -100px;
-
         width: 1200px;
         height: auto;
     }
 
     .serv-text {
-        background: rgba(201, 187, 176, 0.4);
+        background: rgba(201, 187, 176, 0.7);
         position: relative;
         margin: 0 auto;
         padding: 40px 160px 0px 160px;
@@ -1222,11 +1221,6 @@ hr {
 
     .serv-text p {
         min-width: 460px;
-    }
-
-
-    .agents .a-inf {
-        text-align: center;
     }
 
     .agent-cards {
@@ -1301,7 +1295,12 @@ hr {
         flex-direction: column;
         align-items: center;
     }
-
+    .footer-search {
+        margin-left: 80px;
+    }
+    .footer-links {
+        padding: 0px 70px 0px 70px;
+    }
 
 }
 
@@ -1550,8 +1549,12 @@ hr {
         padding-right: 0;
     }
 
-    .stats-info {
-        transform: scale(0.8);
+    .stats-square {
+        font-size: 6vw;
+    }
+
+    .square-text {
+        font-size: 3vw;
     }
 
     .steps_text {
@@ -1584,12 +1587,14 @@ hr {
     .apart .search-button input[type=submit] {
         font-size: 14px;
         width: 100%;
+        padding-right: 0px;
     }
 
     .all_ap {
-        margin-top: 20px;
+        margin-top: 15px;
         margin-right: 40px;
         width: 60vw;
+        transform: scale(0.8);
     }
 
     .steps h2 {
@@ -1597,7 +1602,6 @@ hr {
     }
 
     .steps_text {
-        font-size: 14px;
         letter-spacing: 0.5px;
         word-spacing: 1.5px;
     }
@@ -1632,9 +1636,9 @@ hr {
     }
 
     .agents .a-inf {
-        font-size: 11px;
+        padding: 0px 20px 0px 20px;
+        word-spacing: 0px;
     }
-
 
     .footer-logo h3 {
         font-size: 25px;
@@ -1680,7 +1684,7 @@ hr {
     }
 
     .popup_content {
-        max-width: 500px;
+        /*max-width: 500px;*/
         padding: 10px;
     }
 
@@ -1690,6 +1694,11 @@ hr {
 
     .popup_form_message {
         width: 286px;
+    }
+
+    .message_field .search-button input[type=submit] {
+        width: 290px;
+        padding-right: 0px;
     }
 }
 
@@ -1815,16 +1824,11 @@ hr {
 
     .agent-card img {
         max-width: 100vw;
-
-
     }
 
 
-    .social {
-        display: flex;
-        flex-direction: column;
-        margin: -40px 0px 0px 0px;
-
+    .social a {
+        margin-right: 5px;
     }
 
     .add-line .location {
@@ -1838,14 +1842,6 @@ hr {
 
     .line-img img {
         min-width: 356px;
-    }
-
-    .wrapper h3 {
-        font-size: 20px;
-    }
-
-    .line-text p {
-        font-size: 11px;
     }
 
     .show-more {
@@ -1864,16 +1860,7 @@ hr {
     }
 
     .popup_content {
-        max-width: 400px;
-        padding: 5px;
-    }
-
-    .pupup_form_input {
-        width: 140px;
-    }
-
-    .popup_form_message {
-        width: 186px;
+        transform: scale(0.7);
     }
 }
 
